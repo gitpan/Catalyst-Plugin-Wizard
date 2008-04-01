@@ -1,0 +1,9 @@
+
+Catalyst::Plugin::Wizard -- wizard plugin for catalyst.
+
+For example you need an multistep action -- creation of account,
+filling complex forms etc -- you can use this plugin!
+
+Author: Pavel Boldin <boldin.pavel@gmail.com>. 
+
+Created for WWW.REG.RU project.

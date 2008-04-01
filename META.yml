@@ -1,0 +1,28 @@
+---
+name: Catalyst-Plugin-Wizard
+version: 0.01
+author:
+  - 'Pavel Boldin <boldin.pavel@gmail.com>'
+abstract: 'Catalyst::Plugin::Wizard -- Catalyst module for building wizards'
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  Catalyst: 0.57
+  Catalyst::Plugin::Session: 0.19
+  Clone: ~
+  perl: 5.006
+build_requires:
+  Catalyst::Plugin::Session::State::Cookie: 0
+  Test::More: 0
+  Test::WWW::Mechanize::Catalyst: 0
+provides:
+  Catalyst::Plugin::Wizard:
+    file: lib/Catalyst/Plugin/Wizard.pm
+    version: 0.01
+  Catalyst::Plugin::Wizard::Instance:
+    file: lib/Catalyst/Plugin/Wizard/Instance.pm
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2

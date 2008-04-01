@@ -1,0 +1,22 @@
+Build.PL
+lib/Catalyst/Plugin/Wizard.pm
+lib/Catalyst/Plugin/Wizard/Instance.pm
+Makefile.PL
+MANIFEST			This list of files
+META.yml
+README
+t/01wizard.t
+t/02subwizard.t
+t/03wizard_detach.t
+t/04subwizard_detach.t
+t/05wizard_complex.t
+t/06wizard_catalyst.t
+t/lib/Test/Wizard.pm
+t/lib/WizardTest/ComplexWizardTestApp.pm
+t/lib/WizardTest/ComplexWizardTestApp/Controller/First.pm
+t/lib/WizardTest/ComplexWizardTestApp/Controller/Second.pm
+t/lib/WizardTest/WizardTestApp.pm
+t/lib/WizardTest/WizardTestApp/Controller/First.pm
+t/lib/WizardTest/WizardTestApp/Controller/Second.pm
+TODO
+Changelog
