@@ -11,6 +11,7 @@ my $build = Module::Build->new(
 	'Clone'				=> undef,
     },
     build_requires      => {
+        'ok'						=>  0,
         'Test::More'					=>  0,
 	'Test::WWW::Mechanize::Catalyst'		=>  0,
 	'Catalyst::Plugin::Session::State::Cookie'	=>  0,

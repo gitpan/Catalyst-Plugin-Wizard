@@ -10,7 +10,8 @@ WriteMakefile
                            'Catalyst::Plugin::Session::State::Cookie' => 0,
                            'Clone' => undef,
                            'Test::More' => 0,
-                           'Test::WWW::Mechanize::Catalyst' => 0
+                           'Test::WWW::Mechanize::Catalyst' => 0,
+                           'ok' => 0
                          },
           'INSTALLDIRS' => 'site',
           'EXE_FILES' => [],
