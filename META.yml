@@ -1,6 +1,6 @@
 ---
 name: Catalyst-Plugin-Wizard
-version: 0.02
+version: 0.03
 author:
   - 'Pavel Boldin <boldin.pavel@gmail.com>'
 abstract: 'Catalyst::Plugin::Wizard -- Catalyst module for building wizards'
@@ -11,6 +11,7 @@ requires:
   Catalyst: 0.57
   Catalyst::Plugin::Session: 0.19
   Clone: ~
+  Tie::IxHash: ~
   perl: 5.006
 build_requires:
   Catalyst::Plugin::Session::State::Cookie: 0
@@ -20,7 +21,7 @@ build_requires:
 provides:
   Catalyst::Plugin::Wizard:
     file: lib/Catalyst/Plugin/Wizard.pm
-    version: 0.02
+    version: 0.03
   Catalyst::Plugin::Wizard::Instance:
     file: lib/Catalyst/Plugin/Wizard/Instance.pm
 generated_by: Module::Build version 0.2808

@@ -9,6 +9,7 @@ my $build = Module::Build->new(
         'Catalyst'                      => 0.57,
         'Catalyst::Plugin::Session'     => 0.19,
 	'Clone'				=> undef,
+	'Tie::IxHash'			=> undef,
     },
     build_requires      => {
         'ok'						=>  0,

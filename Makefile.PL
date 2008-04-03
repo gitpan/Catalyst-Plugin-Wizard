@@ -11,6 +11,7 @@ WriteMakefile
                            'Clone' => undef,
                            'Test::More' => 0,
                            'Test::WWW::Mechanize::Catalyst' => 0,
+                           'Tie::IxHash' => undef,
                            'ok' => 0
                          },
           'INSTALLDIRS' => 'site',
