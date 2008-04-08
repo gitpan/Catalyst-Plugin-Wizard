@@ -228,9 +228,14 @@ sub on_deactivate {
     # копируем Catalyst stash к нам если так сконфигурированно
     $self->copy_stash if $c->config->{wizard}{autostash};
 
+    warn "Deactivating with ".$self->parentid if $DEBUG;
+    if ( $DEBUG && $self->parentid ) {
+	local $self->{c};
+	warn Dumper($self);
+    }
     # если есть родитель (это sub wizard) и мы на последнем шаге
     # копируем наши данные к родителю
-    if ($self->parentid && $self->{step} == scalar @{$self->{steps}} ) {
+    if ($self->parentid && $self->{step} >= scalar @{$self->{steps}} ) {
         my $p_wizard = $c->wizards->{$self->parentid};
 
         foreach my $field (qw(data stash params)) {
@@ -284,6 +289,7 @@ sub _construct_sub {
     # так что вызывайте wizard(-sub ... ) только прямо перед переходом--
     my $sub = do {
         local $self->c->req->params->{wid};
+	warn "Creating sub wizard..."    if ($DEBUG);
         $self->c->start_wizard(@options);
     };
 
@@ -300,7 +306,7 @@ sub _construct_sub {
     $self->{added}{$mark} = 1;
 
     # копируем себя в наследника
-    $sub->{$_} = \%{ %{$self->{$_}} } foreach qw(data stash params added);
+    $sub->{$_} = { %{ $self->{$_} } } foreach qw(data stash params added);
 
     if ($DEBUG) { 
         local $sub->{c};
@@ -625,6 +631,8 @@ sub next_or_default {
     warn "returning next_or_default: @next" if $DEBUG;
 
     return wantarray ? @next : $next[0] if @next;
+
+    warn "$self->{id} and parent is: ".$self->parentid;
 
     # удаляем старый wizard если ему некуда больше идти
     # (убиваем бездомных сирот :-( )
