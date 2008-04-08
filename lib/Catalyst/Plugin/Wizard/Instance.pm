@@ -632,7 +632,7 @@ sub next_or_default {
 
     return wantarray ? @next : $next[0] if @next;
 
-    warn "$self->{id} and parent is: ".$self->parentid;
+    warn "$self->{id} and parent is: ".$self->parentid if $DEBUG;
 
     # удаляем старый wizard если ему некуда больше идти
     # (убиваем бездомных сирот :-( )
