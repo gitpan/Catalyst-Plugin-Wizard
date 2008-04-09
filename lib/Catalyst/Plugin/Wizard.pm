@@ -32,7 +32,7 @@ __PACKAGE__->mk_classdata( 'wizards' => {} );
 
 our $DEBUG = $ENV{CATALYST_WIZARD_DEBUG} || 0;
 
-our $VERSION = 0.05;
+our $VERSION = 0.06;
 
 sub instance { 
     shift->config->{wizard}->{instance} 

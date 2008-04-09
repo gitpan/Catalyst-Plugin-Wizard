@@ -60,7 +60,8 @@ ok_redirect('/first/edit/ready_for_fun', undef, 'getting ready for fun');
 # new wizard
 undef $wid;
 
-my @hops = ($m->content =~ /h(\d+),?/go);
+my $content = $m->content;
+my @hops = ($content =~ /h(\d+),?/go);
 
 $next_url = '/first/fun/'.shift(@hops);
 
